@@ -72,11 +72,11 @@ export default function TodoList({ initialTodos }: TodoListProps) {
                                 <button
                                     onClick={() => toggleTodo(todo.id, !todo.completed)}
                                     className={`px-4 py-2 text-sm font-semibold text-white rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-md ${todo.completed
-                                            ? 'bg-gray-500 hover:bg-gray-600'
-                                            : 'bg-gradient-to-br from-[#34c759] to-[#30b350]'
+                                        ? 'bg-gray-500 hover:bg-gray-600'
+                                        : 'bg-gradient-to-br from-[#34c759] to-[#30b350]'
                                         }`}
                                 >
-                                    {todo.completed ? 'Undo' : 'Done'}
+                                    {todo.completed ? 'Undo' : 'Complete'}
                                 </button>
                                 <button
                                     onClick={() => deleteTodo(todo.id)}
