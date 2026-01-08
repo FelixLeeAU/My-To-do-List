@@ -19,13 +19,14 @@ export async function getTodos() {
     }
 }
 
-export async function addTodo(text: string) {
+export async function addTodo(text: string, type: string = 'Personal') {
     if (!text.trim()) return
 
     try {
         await prisma.todo.create({
             data: {
                 text,
+                type,
             },
         })
         revalidatePath('/')
